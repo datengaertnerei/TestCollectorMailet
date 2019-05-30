@@ -59,8 +59,8 @@ public class MockMail implements Mail {
     MailAddress result = null;
     try {
       result = new MailAddress(sender);
-    } catch (AddressException e) { // TODO Auto-generated catch block
-      e.printStackTrace();
+    } catch (AddressException e) {
+      // ignore
     }
     return result;
   }

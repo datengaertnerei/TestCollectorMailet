@@ -3,7 +3,6 @@ package com.datengaertnerei.test.mail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-import com.datengaertnerei.test.mail.TestCollectorMailet;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -17,8 +16,6 @@ import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.mailet.Mail;
 import org.apache.mailet.MailetConfig;
 import org.junit.jupiter.api.AfterAll;
@@ -28,8 +25,6 @@ import org.junit.jupiter.api.Test;
 
 class TestCollectorMailetTest {
   private static final String DROP_TABLE_MAILCONTAINER = "DROP TABLE MAILCONTAINER";
-
-  private static Log log = LogFactory.getLog(TestCollectorMailetTest.class);
 
   private static final String TEST_RECIPIENT = "tester@mail.test";
   private static final String TEST_SENDER = "system@mail.test";
@@ -77,13 +72,8 @@ class TestCollectorMailetTest {
         record[4] = rs.getString("BODY");
         result.add(record);
       }
-
-      log.info(String.format("Statement \"%s\" executed", sqlStatement));
-
     } catch (SQLException e) {
-
-      log.error("", e);
-
+      fail(e);
     } finally {
       if (conn != null) {
         conn.close();
@@ -103,7 +93,6 @@ class TestCollectorMailetTest {
     try (Statement statement = conn.createStatement()) {
       // execute the SQL statement
       statement.execute(sqlStatement);
-      log.debug(String.format("Statement \"%s\" executed", sqlStatement));
 
     } catch (SQLException e) {
       // test setup, statement is definitely closed, rethrow exception
