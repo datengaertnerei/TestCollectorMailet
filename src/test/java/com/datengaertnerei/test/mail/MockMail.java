@@ -166,28 +166,28 @@ public class MockMail implements Mail {
   }
 
   @Override
-  public Stream<Attribute> attributes() { // TODO Auto-generated method stub
+  public Stream<Attribute> attributes() { 
     return null;
   }
 
   @Override
-  public Optional<Attribute> getAttribute(AttributeName name) { // TODO Auto-generated method stub
+  public Optional<Attribute> getAttribute(AttributeName name) { 
     return null;
   }
 
   @Override
-  public Stream<AttributeName> attributeNames() { // TODO Auto-generated method stub
+  public Stream<AttributeName> attributeNames() { 
     return null;
   }
 
   @Override
   public Optional<Attribute> removeAttribute(
-      AttributeName attributeName) { // TODO Auto-generated method stub
+      AttributeName attributeName) { 
     return null;
   }
 
   @Override
-  public Optional<Attribute> setAttribute(Attribute attribute) { // TODO Auto-generated method stub
+  public Optional<Attribute> setAttribute(Attribute attribute) { 
     return null;
   }
 }
