@@ -4,11 +4,15 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.Optional;
+import java.util.stream.Stream;
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import org.apache.james.core.MailAddress;
+import org.apache.mailet.Attribute;
+import org.apache.mailet.AttributeName;
 import org.apache.mailet.Mail;
 import org.apache.mailet.PerRecipientHeaders;
 import org.apache.mailet.PerRecipientHeaders.Header;
@@ -159,5 +163,31 @@ public class MockMail implements Mail {
   @Override
   public void setLastUpdated(Date lastUpdated) {
     // not implemented
+  }
+
+  @Override
+  public Stream<Attribute> attributes() { // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public Optional<Attribute> getAttribute(AttributeName name) { // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public Stream<AttributeName> attributeNames() { // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public Optional<Attribute> removeAttribute(
+      AttributeName attributeName) { // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public Optional<Attribute> setAttribute(Attribute attribute) { // TODO Auto-generated method stub
+    return null;
   }
 }
