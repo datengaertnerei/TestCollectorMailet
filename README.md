@@ -14,3 +14,5 @@ Apache James mailet for e-mail test automation
 	 <password>APP</password>
        </mailet>
 ```
+
+Description is available in German at [datengaertnerei.com](https://www.datengaertnerei.com/posts/email-integrationstest/).
