@@ -15,4 +15,4 @@ Apache James mailet for e-mail test automation
        </mailet>
 ```
 
-Description is available in German at [datengaertnerei.com](https://www.datengaertnerei.com/posts/email-integrationstest/).
+I switched to [MailHog](https://github.com/mailhog/MailHog) or you could use [Smtp4Dev](https://github.com/rnwood/smtp4dev).
